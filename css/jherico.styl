@@ -1,0 +1,781 @@
+/**/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fuentes/icomoon.eot?dde6hy');
+  src:  url('../fuentes/icomoon.eot?dde6hy#iefix') format('embedded-opentype'),
+    url('../fuentes/icomoon.ttf?dde6hy') format('truetype'),
+    url('../fuentes/icomoon.woff?dde6hy') format('woff'),
+    url('../fuentes/icomoon.svg?dde6hy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+	  [class^="icon-"], [class*=" icon-"] {
+	    /* use !important to prevent issues with browser extensions that change fonts */
+	    font-family: 'icomoon' !important;
+	    speak: none;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+.icon-envelope:before {
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e901";
+}
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-comment-o:before {
+  content: "\f0e5";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-paper-plane:before {
+  content: "\f1d8";
+}
+.icon-send:before {
+  content: "\f1d8";
+}
+.icon-paper-plane-o:before {
+  content: "\f1d9";
+}
+.icon-send-o:before {
+  content: "\f1d9";
+}
+.icon-envelope-open:before {
+  content: "\f2b6";
+}
+.icon-email:before {
+  content: "\e909";
+}
+.icon-cart:before {
+  content: "\e90a";
+}
+.icon-home3:before {
+  content: "\e90b";
+}
+.icon-pencil2:before {
+  content: "\e90c";
+}
+.icon-image:before {
+  content: "\e90d";
+}
+.icon-music:before {
+  content: "\e911";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-user-check:before {
+  content: "\e975";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-quotes-right:before {
+  content: "\e978";
+}
+.icon-spinner:before {
+  content: "\e97a";
+}
+.icon-key2:before {
+  content: "\e98e";
+}
+.icon-lock:before {
+  content: "\e98f";
+}
+.icon-unlocked:before {
+  content: "\e990";
+}
+.icon-paperplane:before {
+  content: "\e90e";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-menu:before {
+  content: "\e907";
+}
+.icon-share-alt:before {
+  content: "\e908";
+}
+.icon-facebook:before {
+  content: "\e90f";
+  color: #3b5998;
+}
+.icon-instagram:before {
+  content: "\e910";
+  color: #e4405f;
+}
+.icon-twitter:before {
+  content: "\e913";
+  color: #1da1f2;
+}
+.icon-whatsapp:before {
+  content: "\e914";
+  color: #25d366;
+}
+.icon-youtube:before {
+  content: "\e915";
+  color: #f00;
+}
+
+
+/**/
+/*
+font-family: 'Assistant', sans-serif;
+font-family: 'Heebo', sans-serif;
+*/
+
+
+
+blanco = #E5E5E5;
+crema= #CCC9A0;
+moztaza = #CDA43B;
+moztaza2=#C69230;
+negro = #1F1E23;
+plomo =	#BDB6AD;
+plomo_oscuro = #ACA499;
+marron = #47403A;
+
+body{
+	font-family: 'Assistant', sans-serif;
+	font-size 16px
+	background plomo_oscuro
+	
+}
+
+h1
+h2
+h3
+h4
+p
+	margin 0
+	padding 0
+.contenedor
+	max-width 960px
+	margin 0 auto
+.fondo	
+	background-image: url('../images/muros.jpg')
+	background-size: cover;	
+	height 450px
+	padding-top 10px
+	.contenedor
+		max-width: 960px		
+		margin: 0 auto		
+		height 450px
+		position relative
+		.superior			
+			display: flex
+			justify-content space-between			
+			.logotipo
+				display flex
+				align-items center
+				margin: 0				
+				width 324px
+				text-decoration none
+				figure
+					margin 0											
+					img
+						width 111px										
+				h1					
+					margin 0
+					margin-left: 15px
+					color blanco
+					font-size 26px
+			.menu
+				padding 0				
+				//background peru
+				ul
+					margin 0
+					padding 0
+					display flex
+					//background: brown
+					align-items center
+					height: auto
+					li
+						list-style: none
+						margin 0
+						padding 0
+						&:nth-last-child(1) a:after
+							display none
+						a
+							color blanco
+							text-decoration none
+							//background orange
+							display block
+							height 50px
+							line-height: 50px
+							padding 0 15px							
+							position: relative							
+							transition 0.3s ease-in
+							&:after								
+								content '|'
+								position absolute
+								right: 0
+								color crema
+							&:hover
+								box-shadow inset 0 5px 0 moztaza	
+		.pastor
+			position absolute			
+			bottom 0
+			right 0
+			width 250px
+		.titulos
+			//display block
+			color blanco 
+			font-family: 'Heebo', sans-serif;			
+			font-size 60px
+			font-weight 300
+			margin 0
+			position absolute			
+			top 240px
+			
+		.submenu
+			position absolute
+			bottom 0
+			height 35px			
+			font-size 16px
+			ul
+				margin 0											
+				display flex
+				padding 0
+				li
+					list-style: none
+					margin 0 10px					
+					a
+						display block						
+						text-decoration none
+						color crema
+						height 35px
+						line-height 35px
+						padding 0 15px
+						box-shadow inset 0 2px 0 moztaza 
+						transition 0.3s
+						&:hover
+							background rgba(31, 30, 35, .5)							
+.icon-menu
+	//display inline-block	
+	display none
+	color marron
+	position fixed
+	border-radius 50%
+	text-align center
+	top 15px
+	left 15px
+	font-size 19px
+	z-index: 4
+	background moztaza2
+	width 40px
+	height 40px
+	line-height 40px !important
+section
+	
+	.titulos_paginas		
+		padding 15px 0
+		font-size 24px			
+		
+	.ensena_y_aside
+		display flex
+		width 100%		
+		.caja_ensenanzas
+			background plomo_oscuro			
+			width 72%			
+			position relative
+			padding-bottom 45px			
+			.videos
+				background plomo				
+				margin: 0 0 20px 0
+				//border solid 1px marron					
+				width 100%
+				padding 25px 0
+				display flex
+				justify-content center
+				align-items center				
+				.video-resposive-contenedor					
+					width 252px
+					height 141px
+					position relative
+					//padding-top: 56.25%										
+					.video-responsive-src
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						width: 100%;
+						height: 100%;				
+				.descripcion
+					position relative										
+					max-width 50%
+					padding 0 15px
+					.titulo_predica						
+						display inline-block
+						margin-bottom 10px
+					p
+						
+						display inline-block
+					
+					.fecha
+						display block						
+						position relative
+						text-align right
+						padding-right 10px						
+						font-style oblique
+				.somos		
+					width 100%
+					background olive					
+					p
+						margin-bottom 10px
+						padding 0 10px
+			.vermas
+				display inline-block
+				background moztaza			
+				line-height 35px
+				//float left
+				padding 0 15px
+				font-weight: bold
+				color negro
+				position absolute
+				left 50%
+				bottom 10px
+				text-decoration none
+				border-radius 5px 				
+				
+		aside
+			display flex
+			flex-direction column
+			width 28%			
+			position relative
+			margin-left 10px
+			//padding-right 10px			
+			.horarios
+				color blanco
+				background negro
+				padding 20px 15px				
+				.horario_servicios
+					text-align center
+					color crema
+					margin-bottom 10px
+				.dias
+					border-bottom 1px solid crema
+					margin-bottom 10px
+					h3
+						font-weight normal						
+			
+
+
+
+
+			.ubicacion				
+				.mapa
+					width 100%					
+					height 180px
+				.direccion
+					display flex
+					align-items center
+					background negro
+					color blanco
+					padding 8px 8px
+					span
+						font-size 20px
+						margin-right 5px
+						color crema
+		.caja_somos
+			background green
+			width 70%
+		.aside_somos
+			width 30%
+			background orange
+			img
+				width 100%
+
+.section_ministerios
+	background marron
+	margin-top 20px
+	.contenedor
+		.titulos_secundarios
+			text-align center
+			padding 15px 0
+			color moztaza
+		.caja_ministerios
+			display flex	
+			flex-wrap wrap
+			justify-content space-around
+			text-align center			
+			
+			.ministerios		
+				margin-bottom 30px
+				figure
+					margin 0
+					width 260px
+					height 272px					
+					overflow hidden
+					border-radius 10px 
+					img						
+						width 100%
+						
+				h3
+					margin 15px 0
+					font-size 22px
+					color plomo_oscuro
+				.ver-mas
+					display inline-block
+					background moztaza
+					text-decoration none
+					color negro
+					padding 10px 20px
+					border-radius 5px
+					font-weight bold
+
+footer
+	background negro
+	padding 20px 0 
+	.columnas
+		color blanco
+		display flex
+		justify-content space-around
+		.col_horarios			
+			width 20%
+			.horarios				
+				padding-top 0
+				.horario_servicios
+					color crema
+					margin-bottom 10px
+				
+				.dias
+					border-bottom 1px solid crema
+					padding 10px 0
+		.col_enlaces			
+			font-size 18px
+			h3
+				color crema
+				margin-bottom 10px
+			.enlaces
+				padding 0;				
+				margin 0
+				li
+					list-style: none
+					a
+						text-decoration none
+						display block
+						color blanco
+						padding 4px 0
+				
+		.col_direccion			
+			position relative
+			width 35%
+			.logotipo			
+				display flex				
+				align-items center				
+				margin: 0				
+				width 100%
+				text-decoration none
+				figure
+					margin 0											
+					img
+						width 111px										
+				h3					
+					margin 0
+					margin-left: 15px
+					color crema
+					font-size 26px
+			.datos
+				width 100%
+				margin 10px 0
+				span
+					display block
+					margin 5px 0
+			.suscripcion
+				display flex
+				flex-direction column
+				h3
+					margin-bottom 10px
+				input[type="text"]
+				input[type="email"]
+					margin-bottom 10px
+					outline none
+					font-size 16px
+					padding 5px
+					background: none
+					border solid 1px blanco
+					border-radius 5px 
+					color crema
+				input[type="submit"]
+					outline none
+					color negro
+					background moztaza
+					border none
+					display block
+					width 130px
+					border-radius 5px
+					padding 5px
+					cursor pointer
+					
+@media screen and (max-width: 768px)
+	.icon-menu
+		display block
+	
+	.contenedor			
+		.ensena_y_aside
+				flex-direction column		
+				align-items center
+				.caja_ensenanzas
+					width 100%					
+						
+				aside					
+					width 100%
+					flex-direction row					
+					position relative					
+					margin-left 0
+					.horarios
+						width 30%
+					.ubicacion						
+						position relative						
+						width 70%						
+						.mapa							
+							height 100%
+						.direccion
+							padding 8px 0							
+							justify-content center														
+							position absolute
+							bottom 0
+							width 100%
+							
+							
+							
+								
+							
+								
+							
+							
+							
+							
+	footer		
+		.columnas
+			.col_direccion
+				.logotipo
+					figure						
+						img
+							width 90px
+					h3						
+						font-size 20px
+@media screen and (max-width: 880px)
+	
+	.fondo
+		.contenedor
+			.titulos
+				padding-left 10px
+			.pastor
+				width 220px
+			
+	.titulos_paginas		
+		display block		
+		margin-left 15px
+			
+	.superior		
+		flex-direction column
+		align-items center
+
+		.submenu			
+			width 100%
+			ul
+				justify-content center
+	footer		
+		.columnas
+			.col_direccion
+				.logotipo					
+							
+					h3						
+						font-size 20px
+@media screen and (max-width: 540px)
+	.fondo
+		.contenedor
+			.titulos
+				font-size 35px
+				width 180px
+				font-weight 300
+				padding-left 10px
+			.submenu
+				display flex				
+				width 100%
+				height auto				
+				ul
+					display flex
+					justify-content center
+					flex-direction column
+					text-align center
+		
+	.superior
+		
+		.logotipo
+			h1
+				display block				
+				margin 0 !important
+				text-align center
+				font-size 21px !important
+		.menu
+			background rgba(71, 64, 58, .75)
+			width 100%
+			position fixed		
+			top 0
+			bottom 0
+			left -100%
+			z-index 3
+			//width 100%
+			display flex
+			justify-content center
+			align-items center
+			transition: all 0.3s cubic-bezier(1, -0.5, 0.5, 1);
+			ul			
+				width 100%							
+				flex-direction column
+				li
+					font-size 20px
+					width 100%
+					text-align center
+					&:first-child
+						border-top 1px solid crema
+					a
+						color crema !important
+						border-bottom 1px solid crema
+						transition none !important
+						text-shadow -2px 3px 2px negro
+						font-weight bold
+						&:after
+							display none
+						&:hover
+							box-shadow none !important
+							
+		.menu.activo
+			left 0	
+		.icon-close:before {
+  			content: "\e906";
+			}			
+	.contenedor
+		.ensena_y_aside
+			.caja_ensenanzas
+				padding 0
+				background plomo_oscuro
+				display flex
+				flex-direction column
+				.videos
+					background plomo
+					flex-direction column							
+					.video-resposive-contenedor						
+						position relative
+						width 100%
+						height 100%
+						padding-top 56.25%
+						.video-responsive-src
+							position: absolute
+							top 0
+							right 0
+							left 0
+							bottom 0
+							width 100%
+							height 100%
+					.descripcion
+						max-width 100%
+						padding 10px	 	
+				.vermas
+					position relative
+					margin 0 auto
+					left auto
+			aside				
+				flex-direction column
+				background red
+				.horarios
+					text-align center
+					width 100%
+					padding 0					
+					.dias
+						border none
+
+				.ubicacion
+					position static
+					width 100%
+					height 220px
+					.direccion
+						span
+							font-size 24px
+							margin-left 10px
+						
+	/*logotipo del pie*/		
+	.logotipo
+		flex-direction column
+	footer
+		.columnas
+			flex-direction column
+			.col_horarios
+			.col_enlaces
+			.col_direccion
+				border-bottom 1px dashed crema	
+			.col_horarios				
+				width 100%
+				text-align center
+				.horarios
+					padding 0
+					.dias
+						border none
+			.col_enlaces				
+				width 100%
+				text-align center
+				padding 10px 0
+			.col_direccion
+				width 100%				
+				text-align center
+				padding-top 10px
+				border none
+				.logotipo
+					figure
+						img
+							width 120px
+				.suscripcion
+					input[type="submit"]
+						margin 0 auto
+					input[type="text"],
+					input[type="email"]
+						width 80%
+						margin 10px auto
+				
+	/*fin logo del pie*/
+@media screen and (max-width: 320px)
+	.fondo
+		.contenedor
+			.titulos
+				max-width 180px
+@media screen and (max-width: 680px)
+	.fondo
+		.contenedor
+			.titulos
+				max-width 300px
+		
+
+
+	
+	
+	
