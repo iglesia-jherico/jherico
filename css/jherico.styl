@@ -163,9 +163,9 @@ marron = #47403A;
 
 body{
 	font-family: 'Assistant', sans-serif;
-	font-size 16px
+	font-size 18px
 	background plomo_oscuro
-	
+	color negro
 }
 
 h1
@@ -175,6 +175,8 @@ h4
 p
 	margin 0
 	padding 0
+
+	
 .contenedor
 	max-width 960px
 	margin 0 auto
@@ -190,7 +192,8 @@ p
 		position relative
 		.superior			
 			display: flex
-			justify-content space-between			
+			justify-content space-between		
+				
 			.logotipo
 				display flex
 				align-items center
@@ -200,7 +203,8 @@ p
 				figure
 					margin 0											
 					img
-						width 111px										
+						width 111px
+						opacity 1										
 				h1					
 					margin 0
 					margin-left: 15px
@@ -244,6 +248,10 @@ p
 			bottom 0
 			right 0
 			width 250px
+			transition .3s
+			opacity 0
+		.b-loaded
+			opacity 1
 		.titulos
 			//display block
 			color blanco 
@@ -292,12 +300,15 @@ p
 	width 40px
 	height 40px
 	line-height 40px !important
+
+
 section
 	
 	.titulos_paginas		
 		padding 15px 0
-		font-size 24px			
-		
+		font-size 24px
+		color negro
+		text-decoration underline		
 	.ensena_y_aside
 		display flex
 		width 100%		
@@ -394,6 +405,7 @@ section
 				.mapa
 					width 100%					
 					height 180px
+					
 				.direccion
 					display flex
 					align-items center
@@ -405,14 +417,140 @@ section
 						margin-right 5px
 						color crema
 		.caja_somos
-			background green
 			width 70%
+			padding 10px
+			.mision
+			.vision
+				margin-top 10px
+				color negro
+				
 		.aside_somos
-			width 30%
-			background orange
+			width 30%			
 			img
 				width 100%
-
+			.imgsomos
+				transition .5s
+				opacity 0
+			.b-loaded
+				opacity 1
+				
+		.caja_pastores
+			width 72%
+			.pastor
+				background plomo
+				margin-bottom 20px
+				padding 10px				
+				.nombre_pastores
+					margin-bottom 10px
+				figure
+					box-sizing border-box
+					margin 0
+					padding 10px 10px 0 10px					
+					float left
+					width 200px
+					border-radius 10px
+					border solid 2px marron					
+					img
+						width 100%
+						position relative
+						bottom -5px
+						transition .5s
+						opacity 0
+					.b-loaded
+						opacity 1
+				.pastor-a
+					margin 0 10px 10px 0
+				.pastor-b
+					float right
+		.aside_pastores
+			background plomo
+			width 28%
+			.imagenes_aside				
+				figure
+					margin 0
+					width 100%
+					img
+						width 100%
+						transition .5s
+						opacity 0
+					.b-loaded
+						opacity 1
+			.intereses				
+				h2					
+					color marron
+					text-align center
+					padding 10px
+					border-bottom 4px solid marron 
+					margin-bottom 10px
+				.videos_intereses					
+					.video-resposive-contenedor						
+						position relative
+						width 100%
+						height 100%
+						padding-top 56.25%
+						margin-bottom 10px
+						.video-responsive-src							
+							position absolute
+							top 0
+							right 0
+							bottom 0
+							left 0
+							width 100%
+							height 100%
+	.video_somos
+		display flex
+		justify-content space-between		
+		.video_descripcion_somos
+			display flex
+			background plomo						
+			width 48%
+			margin-bottom 20px			
+			.descripcion
+				padding 0 10px
+				position relative
+				.titulo_predica
+					margin-bottom 10px
+				.fecha
+					position absolute
+					bottom 0
+					right 10px
+	.predicas
+		.videos			
+			display flex			
+			margin-bottom 20px
+			padding 10px
+			background plomo
+			.descripcion
+				position relative
+				padding 0 10px
+				.titulo_predica
+					margin-bottom 10px
+				.fecha
+					position absolute
+					bottom 0
+	.caja_testimonios
+			.testimonio
+				background plomo
+				padding 10px
+				display flex			
+				figure
+					margin 0
+					padding 0
+					img
+						transition .5s
+						opacity 0
+					.b-loaded
+						opacity 1					
+				.descripcion
+					margin-left 10px
+					.titulo_testimonio
+						margin-bottom 10px
+					.fecha
+						margin-top 20px						
+						span
+							margin-right 7px
+						a
+							color marron
 .section_ministerios
 	background marron
 	margin-top 20px
@@ -437,7 +575,12 @@ section
 					border-radius 10px 
 					img						
 						width 100%
-						
+						transition .5s
+						opacity 0
+					.b-loaded
+						opacity 1											
+					
+					
 				h3
 					margin 15px 0
 					font-size 22px
@@ -450,6 +593,7 @@ section
 					padding 10px 20px
 					border-radius 5px
 					font-weight bold
+
 
 footer
 	background negro
@@ -497,7 +641,12 @@ footer
 				figure
 					margin 0											
 					img
-						width 111px										
+						width 111px
+						transition .5s
+						opacity 0
+					.b-loaded
+						opacity 1
+															
 				h3					
 					margin 0
 					margin-left: 15px
@@ -534,46 +683,56 @@ footer
 					border-radius 5px
 					padding 5px
 					cursor pointer
-					
+
 @media screen and (max-width: 768px)
 	.icon-menu
 		display block
 	
 	.contenedor			
-		.ensena_y_aside
-				flex-direction column		
-				align-items center
-				.caja_ensenanzas
+		.ensena_y_aside			
+			flex-direction column		
+			align-items center			
+			.caja_ensenanzas
 					width 100%					
-						
-				aside					
-					width 100%
-					flex-direction row					
-					position relative					
-					margin-left 0
-					.horarios
+			aside
+				width 100%
+				flex-direction row					
+				position relative					
+				margin-left 0
+				.horarios
 						width 30%
-					.ubicacion						
-						position relative						
-						width 70%						
-						.mapa							
+				.ubicacion						
+					position relative						
+					width 70%						
+					.mapa							
 							height 100%
-						.direccion
-							padding 8px 0							
-							justify-content center														
-							position absolute
-							bottom 0
-							width 100%
+					.direccion
+						padding 8px 0							
+						justify-content center														
+						position absolute
+						bottom 0
+						width 100%
+			.caja_somos
+				width auto							
+			.caja_pastores				
+				width 100%
+			.aside_pastores
+				display flex
+				flex-direction column
+				.imagenes_aside
+					display flex
+				.intereses
+					padding 0 10px
+					h2						
+						border none
+					.videos_intereses						
+						display flex
+						flex-direction column
+						justify-content center
+						.video-resposive-contenedor							
+							margin-bottom 15px
 							
-							
-							
-								
-							
-								
-							
-							
-							
-							
+						
 	footer		
 		.columnas
 			.col_direccion
@@ -611,6 +770,16 @@ footer
 							
 					h3						
 						font-size 20px
+@media screen and (max-width: 900px)
+	.contenedor
+		.video_somos
+			flex-direction column
+			.video_descripcion_somos
+				width 100%
+				padding 10px 0						
+				.descripcion
+					.fecha
+						left 10px
 @media screen and (max-width: 540px)
 	.fondo
 		.contenedor
@@ -705,9 +874,12 @@ footer
 					position relative
 					margin 0 auto
 					left auto
-			aside				
-				flex-direction column
-				background red
+			.caja_pastores
+				.pastor
+					figure
+						width 150px
+			aside
+				flex-direction column				
 				.horarios
 					text-align center
 					width 100%
@@ -721,9 +893,53 @@ footer
 					height 220px
 					.direccion
 						span
-							font-size 24px
-							margin-left 10px
-						
+							font-size 24px							
+		.titulos_paginas
+			text-align center
+			margin 0
+			.jherico
+				color marron
+		.video_somos
+			.video_descripcion_somos				
+				flex-direction column
+				padding-top 0
+				.video-resposive-contenedor
+					width 100%
+					height 100%
+					padding-top: 56.25%;
+					position relative
+					.video-responsive-src
+						position absolute
+						width 100%
+						height 100%
+						top 0
+						right 0
+						left 0
+						bottom 0
+				.descripcion
+					.titulo_predica
+						margin-top 10px
+					.fecha
+						position static
+		.caja_testimonios
+			color negro			
+			.testimonio
+				flex-direction column
+				//padding 10px
+				margin-bottom 20px
+				background plomo
+				figure					
+					img
+						width 100%
+				.descripcion
+					.titulo_testimonio
+						margin 10px 0 
+					.fecha						
+						margin-top 10px
+						a
+							color marron								
+						span								
+							font-size 18px							
 	/*logotipo del pie*/		
 	.logotipo
 		flex-direction column
@@ -763,6 +979,24 @@ footer
 						margin 10px auto
 				
 	/*fin logo del pie*/
+@media screen and (max-width: 355px)
+	.fondo
+		.contenedor
+			.superior
+				.logotipo					
+					width 100%
+	.section_ministerios
+		.contenedor
+			.caja_ministerios
+				.ministerios
+					figure
+						width 100%
+	.contenedor
+		.ensena_y_aside					
+			.aside_pastores								
+				.imagenes_aside
+					padding 0 10px
+					flex-direction column
 @media screen and (max-width: 320px)
 	.fondo
 		.contenedor
@@ -773,8 +1007,36 @@ footer
 		.contenedor
 			.titulos
 				max-width 300px
-		
-
+			
+	.contenedor
+		.predicas			
+			.videos				
+				display flex
+				flex-direction column			
+				margin-bottom 20px
+				padding 10px
+				.video-resposive-contenedor						
+					position relative
+					width 100%
+					height 100%
+					padding-top 56.25%
+					.video-responsive-src
+						position: absolute
+						top 0
+						right 0
+						left 0
+						bottom 0
+						width 100%
+						height 100%
+					
+				.descripcion
+					position relative
+					padding 0 10px
+					.titulo_predica
+						margin 10px 0
+					.fecha
+						position static						
+						margin-top 10px
 
 	
 	
