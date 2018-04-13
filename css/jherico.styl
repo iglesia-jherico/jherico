@@ -180,7 +180,7 @@ p
 .contenedor
 	max-width 960px
 	margin 0 auto
-.fondo	
+.fondo
 	background-image: url('../images/muros.jpg')
 	background-size: cover;	
 	height 450px
@@ -285,6 +285,15 @@ p
 						transition 0.3s
 						&:hover
 							background rgba(31, 30, 35, .5)							
+
+.fecha
+	&:before
+		font-family "icomoon"
+		content: "\f073"
+		margin-right 5px						
+		font-weight normal
+		color marron
+		font-style normal
 .icon-menu
 	//display inline-block	
 	display none
@@ -356,6 +365,10 @@ section
 						text-align right
 						padding-right 10px						
 						font-style oblique
+						padding-top 5px
+						border-top 1px negro solid
+						margin-top 5px
+						font-size 15px													
 				.somos		
 					width 100%
 					background olive					
@@ -419,6 +432,7 @@ section
 		.caja_somos
 			width 70%
 			padding 10px
+			background plomo
 			.mision
 			.vision
 				margin-top 10px
@@ -504,16 +518,20 @@ section
 			display flex
 			background plomo						
 			width 48%
-			margin-bottom 20px			
+			margin-bottom 20px
+			align-items center
+			//.video-resposive-contenedor				
 			.descripcion
 				padding 0 10px
 				position relative
-				.titulo_predica
-					margin-bottom 10px
+				p
+					margin 7px 0
+					
 				.fecha
-					position absolute
-					bottom 0
-					right 10px
+					border-top 1px solid negro
+					padding 5px 0						
+					text-align right
+					font-size 15px
 	.predicas
 		.videos			
 			display flex			
@@ -523,11 +541,57 @@ section
 			.descripcion
 				position relative
 				padding 0 10px
-				.titulo_predica
-					margin-bottom 10px
+				p
+					margin 10px 0					
 				.fecha
-					position absolute
-					bottom 0
+					border-top 1px solid negro
+					text-align right
+					padding 5px 0
+					font-size 15px				
+	.ubicanos
+		background plomo
+		display flex
+		padding 10px
+		margin-bottom 20px
+		figure
+			margin 0			
+			img
+				width 280px
+				transition .5s				
+				opacity 0
+			.b-loaded
+				opacity 1
+				
+		.invitacion
+			margin-left 10px
+			p
+				margin-bottom 10px
+			
+	.ubicacion
+		.mapa
+			width 100%
+			height 440px			
+		.direccion
+			background negro
+			width 100%
+			height 30px
+			display flex
+			justify-content center
+			align-items center
+			padding 10px 0
+			p
+				color blanco				
+				text-align center				
+				&:before
+					font-family "icomoon"
+					content: "\e90b"
+					margin-right 5px						
+					font-weight normal
+					color crema
+					font-style normal
+								
+			
+					
 	.caja_testimonios
 			.testimonio
 				background plomo
@@ -1038,6 +1102,17 @@ footer
 						position static						
 						margin-top 10px
 
-	
+@media screen and (max-width: 655px)
+	.contenedor
+		.ubicanos
+			flex-direction column
+			align-items center		
+			figure
+				max-width 280px
+				img
+					width 100%
+			.invitacion 
+				margin 0
+
 	
 	
