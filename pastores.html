@@ -22,6 +22,9 @@
 				</a>
 				<span class="icon-menu" id="icon-menu"></span>
 				<nav id="menu" class="menu">
+					<figure class="logo_movil">
+						<img src="images/jherico.png" alt="Jherico"/>
+					</figure>
 					<ul>
 						<li><a href="index.html">Inicio</a></li>
 						<li><a href="somos.html">Quienes Somos</a></li>
@@ -63,7 +66,7 @@
 				<div class="pastor">
 					<h2 class="nombre_pastores">Maya De Quiroz Rosas</h2>
 					<figure class="pastor-b">
-						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="images/pastorb.png" alt="pastor Quiroz">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="images/pastora.png|images/pastora2x.png|" alt="pastora Maya">
 					</figure>
 					<p>Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la costa de la semántica, un gran océano de lenguas.</p>
 
@@ -84,7 +87,7 @@
 					</figure>
 					<figure>					
 						<div class="img_somos">
-							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="images/somos.jpg|images/somos2x.jpg" alt="pastor">	
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="images/viaje.jpg|images/viaje2x.jpg" alt="pastor">	
 						</div>
 					</figure>
 				</div>
@@ -92,10 +95,10 @@
 					<h2>También te puede puede interesar</h2>
 					<div class="videos_intereses">
 						<div class="video-resposive-contenedor">
-							<iframe class="video-responsive-src" width="235" height="132" src="https://www.youtube.com/embed/0W3DUfVdQVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe class="video-responsive-src" width="235" height="132" src="https://www.youtube.com/embed/g_-GLiEix4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 						<div class="video-resposive-contenedor">
-							<iframe class="video-responsive-src" width="235" height="132" src="https://www.youtube.com/embed/0W3DUfVdQVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe class="video-responsive-src" width="235" height="132" src="https://www.youtube.com/embed/kQF5xykt8ms" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 						<div class="video-resposive-contenedor">
 							<iframe class="video-responsive-src" width="235" height="132" src="https://www.youtube.com/embed/0W3DUfVdQVk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -170,57 +173,6 @@
 	<script src="js/hammer.min.js"></script>
 	<script src="js/maps.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
-	<script>
-		var consulta=window.matchMedia('(max-width:540px)');		
-		//escuchamos la variable consulta sin recargar pagina
-		consulta.addListener(mediaQuery);
-
-		var $iconMenu=document.getElementById('icon-menu');
-		var $menu=document.getElementById('menu');
-		
-		function toggleMenu() {
-			$menu.classList.toggle('activo');
-			$iconMenu.classList.toggle('icon-close');
-
-		}
-
-		function mostrarMenu() {
-			$menu.classList.add('activo');
-			$iconMenu.classList.toggle('icon-close');
-		}
-
-		function ocultarMenu() {
-			$menu.classList.remove('activo');
-			$iconMenu.classList.remove('icon-close');
-		}
-
-
-		function mediaQuery() {
-			
-			if (consulta.matches) {
-				console.log('Se cumplio la condicion');
-
-				$iconMenu.addEventListener('touchstart',mostrarMenu);
-			}else{
-				$iconMenu.removeEventListener('touchstart',mostrarMenu);
-				console.log('No cumplio la condicion');
-			}
-		}
-		//hacemos que la funcion se ejecute al iniciar la pagina
-		mediaQuery()
-		
-		//carga de imagenes  con BeLazy
-		var bLazy = new Blazy({
-    		selector:'img'
-		});
-		/*gestos touch*/
-		var $body = document.body;
-		var gestos = new Hammer($body);
-		gestos.on('swipeleft', ocultarMenu);
-
-		gestos.on('swiperight', mostrarMenu);
-
-		/*fin gestos*/
-	</script>
+	<script src="js/menu.js"></script>
 </body>
 </html>

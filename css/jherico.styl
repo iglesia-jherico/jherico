@@ -1,5 +1,4 @@
 /**/
-
 @font-face {
   font-family: 'icomoon';
   src:  url('../fuentes/icomoon.eot?dde6hy');
@@ -213,7 +212,9 @@ p
 					font-size 26px
 			.menu
 				padding 0				
-				//background peru
+				//background peru				
+				.logo_movil
+					display none
 				ul
 					margin 0
 					padding 0
@@ -876,7 +877,7 @@ footer
 				text-align center
 				font-size 21px !important
 		.menu
-			background rgba(71, 64, 58, .75)
+			background rgba(31, 30, 35, .95)						
 			width 100%
 			position fixed		
 			top 0
@@ -886,25 +887,38 @@ footer
 			//width 100%
 			display flex
 			justify-content center
+			flex-direction column
 			align-items center
 			transition: all 0.3s cubic-bezier(1, -0.5, 0.5, 1);
+			.logo_movil				
+				display block !important				
+				margin 0				
+				position relative
+				top -37px
+				img
+					width 150px
 			ul			
 				width 100%							
 				flex-direction column
 				li
 					font-size 20px
 					width 100%
-					text-align center
+					text-align left
 					&:first-child
 						border-top 1px solid crema
+					
 					a
 						color crema !important
 						border-bottom 1px solid crema
 						transition none !important
 						text-shadow -2px 3px 2px negro
-						font-weight bold
+						//font-weight bold
 						&:after
 							display none
+						&:before
+							font-family 'icomoon'
+							content: "\f105";
+							margin-right 10px
 						&:hover
 							box-shadow none !important
 							
